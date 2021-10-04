@@ -1,2 +1,2 @@
-# Student
- Development In Swift Worksheets
+# SwiftIntro
+ These are the completed Develop In swift fundamental exercises
