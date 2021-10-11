@@ -6,6 +6,9 @@
  Suppose your app contains a list of different movements that can be tracked. You want to display each item in the list to the user. Use a for-in loop to loop through `movements` below and print each movement.
  */
 let movements: [String] = ["Walking", "Running", "Swimming", "Cycling", "Skiing", "Climbing"]
+for movement in movements{
+    print(movement)
+}
 
 
 /*:
@@ -13,5 +16,7 @@ let movements: [String] = ["Walking", "Running", "Swimming", "Cycling", "Skiing"
  */
 var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimming": 130, "Cycling": 128, "Skiing": 114, "Climbing": 129]
 
-
+for (movement, hr) in movementHeartRates{
+    print("When \(movement) your average heart rate is \(hr)")
+}
 //: [Previous](@previous)  |  page 2 of 6  |  [Next: Exercise - While Loops](@next)
