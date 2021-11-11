@@ -20,8 +20,11 @@ class ViewController: UIViewController {
             newRound()
         }
     }
-    var currentScore = 0
-
+    var player1 = 0
+    var player2 = 0
+    var currentPlayer = true
+    
+    @IBOutlet weak var gameScore2: UILabel!
     @IBOutlet weak var gameScore: UILabel!
     @IBOutlet weak var treeImageView: UIImageView!
     @IBOutlet weak var correctWordLabel: UILabel!
@@ -52,7 +55,8 @@ class ViewController: UIViewController {
         
         let wordWithSpacing = letters.joined(separator: " ")
         correctWordLabel.text = wordWithSpacing
-        gameScore.text = "Score: \(currentScore)"
+        gameScore.text = "Player 1 Score: \(player1)"
+        gameScore2.text = "Player 2 Score: \(player2)"
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
@@ -62,7 +66,13 @@ class ViewController: UIViewController {
         let letterString = sender.title(for: .normal)!
         let letter = Character(letterString.lowercased())
         if currentGame.playerGuessed(letter: letter) {
-            currentScore += 5
+            if currentPlayer{
+                player1 += 5
+            }else{
+                player2 += 5
+            }
+        }else{
+            currentPlayer.toggle()
         }
         updateGameState()
     }
@@ -71,7 +81,11 @@ class ViewController: UIViewController {
         if currentGame.incorrectMovesRemaining == 0 {
             totalLosses += 1
         } else if currentGame.word == currentGame.formattedWord {
-            currentScore += 10
+            if currentPlayer{
+                player1 += 10
+            }else{
+                player2 += 10
+            }
             totalWins += 1
         }else{
             updateUI()

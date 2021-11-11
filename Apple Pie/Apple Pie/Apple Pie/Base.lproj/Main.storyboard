@@ -367,12 +367,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-wa-tlY">
-                                                <rect key="frame" x="662.5" y="265" width="41.5" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-wW-JO8">
+                                                <rect key="frame" x="603.5" y="265" width="159" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-wa-tlY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0B-5O-rPf">
+                                                        <rect key="frame" x="111" y="0.0" width="48" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -390,6 +401,7 @@
                     <connections>
                         <outlet property="correctWordLabel" destination="O2n-vv-fvF" id="JNs-Vm-i6T"/>
                         <outlet property="gameScore" destination="DOv-wa-tlY" id="BXq-9p-eVt"/>
+                        <outlet property="gameScore2" destination="a0B-5O-rPf" id="gyB-w4-BjD"/>
                         <outlet property="scoreLabel" destination="Htr-1C-PHJ" id="o9t-lV-0EL"/>
                         <outlet property="treeImageView" destination="Jd8-qk-RMX" id="TwA-w6-DUw"/>
                         <outletCollection property="letterButtons" destination="5ee-XX-hq4" collectionClass="NSMutableArray" id="CVM-tY-g5E"/>
@@ -422,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="81"/>
+            <point key="canvasLocation" x="19.765739385065885" y="80.859375"/>
         </scene>
     </scenes>
     <resources>
